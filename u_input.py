@@ -14,12 +14,12 @@ def boolean(output_true=None, output_false=None, question=None):
     output_false : the option for returning False
     question : The text added before the input
     """
-    i = ''
+    i = ""
     # if blank setting variables to defaults up defaults
     if output_true is None:
-        output_true = 'y'
+        output_true = "y"
     if output_false is None:
-        output_false = 'n'
+        output_false = "n"
     if question is None:
         question = ()
     # printing the requested question if it exists
@@ -27,7 +27,7 @@ def boolean(output_true=None, output_false=None, question=None):
         print(question)
     # getting user input and verifying that it is valid
     while i not in [output_true, output_false]:
-        i = input(f'({output_true}/{output_false})_?')
+        i = input(f"({output_true}/{output_false})_?")
     # sorting
     if i == output_true:
         return True
@@ -36,22 +36,22 @@ def boolean(output_true=None, output_false=None, question=None):
 
 
 def number_only(*question):
-    i = ''
+    i = ""
     while not i.isdigit():
-        i = input(f'{str(*question)}_?')
+        i = input(f"{str(*question)}_?")
     return int(i)
 
 
 def alpha_only(*question):
-    i = '1'
+    i = "1"
     while not i.isalpha():
-        i = input(f'{str(*question)}_?')
+        i = input(f"{str(*question)}_?")
     return i
 
 
 def int_only(*question):
-    i = ''
+    i = ""
     loop = True
     while not isint(i):
-        i = input(f'{str(*question)}_?')
+        i = input(f"{str(*question)}_?")
     return int(i)
