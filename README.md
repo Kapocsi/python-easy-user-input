@@ -15,7 +15,7 @@ number_only('<user input prompt>')
 int_only('<user input prompt>')
 
 # return a true or false
-boolean('<user prompt for true>','<user prompt for false>',<user input>)
+boolean('<user prompt for true>','<user prompt for false>','<user input>')
 
 # retruns a non-numeric/alpha string
 alpha_only('<user input prompt>')
